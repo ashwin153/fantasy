@@ -1,0 +1,19 @@
+name: ci
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        run: |
+          sudo sed -i 's/# deb-src/deb-src/' /etc/apt/sources.list
+          sudo apt-get update -y
+          sudo apt-get build-dep -y python3
+          sudo apt-get install npm
+          sudo npm install -g @bazel/bazelisk
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: bazel build //...
+      - name: Test
+        run: bazel test //...
