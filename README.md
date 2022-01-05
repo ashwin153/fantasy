@@ -1,8 +1,15 @@
-# Fantasy
----
-![Continuous Integration](https://github.com/ashwin153/fantasy/workflows/ci/badge.svg)
+<p align="center">
+    A daily fantasy sports toolkit.
+</p>
 
-# Structure
+<p align="center">
+  <a href="https://github.com/ashwin153/fantasy/actions/workflows/ci.yml">
+    <img
+      src="https://github.com/ashwin153/fantasy/workflows/ci/badge.svg?branch=main"
+      alt="Continuous Integration"
+    />
+  </a>
+</p>
 
 ```bash
 fantasy/
@@ -13,7 +20,7 @@ fantasy/
 └── fantasy/      # Source code.
 ```
 
-# Build
+The repository is built and tested by [Bazel].
 
 ```bash
 # Install Bazelisk.
@@ -23,13 +30,17 @@ sudo apt-get build-dep -y python3
 sudo apt-get install npm
 npm install -g @bazel/bazelisk
 
-# Install pre-commit hooks.
-# https://pre-commit.com/
-curl https://pre-commit.com/install-local.py | python -
-pre-commit install
-
 # Build and test source code.
 # https://docs.bazel.build/versions/master/install.html
 bazel build //...
 bazel test //...
+```
+
+The repository is linted by Pre-Commit.
+
+```bash
+# Install pre-commit hooks.
+# https://pre-commit.com/
+curl https://pre-commit.com/install-local.py | python -
+pre-commit install
 ```
