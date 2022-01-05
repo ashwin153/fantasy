@@ -1,4 +1,4 @@
-# Optimize
+## Overview
 
 In daily fantasy sports, contestants compete for prize money by selecting the lineup that
 accumulates the maximum number of points subject to certain salary and roster constraints. Anyone

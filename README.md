@@ -13,8 +13,7 @@
 
 ```bash
 fantasy/
-├── assets/       # Static files.
-├── docs/         # Documentation website.
+├── .github/      # Continuous integration.
 ├── third_party/  # External dependencies.
 ├── tools/        # Bazel configuration.
 └── fantasy/      # Source code.
